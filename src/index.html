@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <title>UOC Boilerplate</title>
+</head>
+<body>
+<!-- Navbar -->
+<header>
+  <nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">UOC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="participants.html">Participants</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+  </nav>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="uoc-grid">
+    <picture class="uoc-grid__item uoc-grid__item--image animate__animated animate__fadeIn">
+      <source srcset="./assets/images/imagen1.jpeg?as=webp&width=350" type="image/webp" />
+      <img src="./assets/images/imagen1.jpeg?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo img-fluid" />
+    </picture>
+    <div class="uoc-grid__item uoc-grid__item--text animate__animated animate__bounceIn">
+      <p>This is a starter template for the Advanced HTML and CSS Tools courses from the Master's Program in.</p>
+    </div>
+    <picture class="uoc-grid__item uoc-grid__item--image animate__animated animate__fadeIn">
+      <source srcset="./assets/images/imagen2.jpeg?as=webp&width=350" type="image/webp" />
+      <img src="./assets/images/imagen2.jpeg?width=350" alt="Another Image" class="img-fluid" />
+    </picture>
+    <div class="uoc-grid__item uoc-grid__item--text">
+      <p>Another text content for the grid layout.</p>
+    </div>
+    <picture class="uoc-grid__item uoc-grid__item--image animate__animated animate__fadeIn">
+      <source srcset="./assets/images/imagen3.jpeg?as=webp&width=350" type="image/webp" />
+      <img src="./assets/images/imagen3.jpeg?width=350" alt="Third Image" class="img-fluid" />
+    </picture>
+    <div class="uoc-grid__item uoc-grid__item--text">
+      <p>More text content for the grid layout.</p>
+    </div>
+  </div>
+  <include src="./views/footer.html"></include>
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
 </html>
