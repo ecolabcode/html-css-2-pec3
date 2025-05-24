@@ -1,57 +1,92 @@
 /* Participants Grid Styles */
 .participants-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  @apply flex flex-col gap-4;
 
   @media (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    @apply flex-row flex-wrap justify-between;
   }
 }
 
 .participant {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  border-radius: 1rem;
-  overflow: hidden;
-  margin-bottom: 1rem;
-  flex: 0 1 100%;
+  @apply flex flex-col bg-white p-4 rounded-lg shadow-lg overflow-hidden mb-4;
 
   @media (min-width: 768px) {
-    flex: 0 1 calc(33.333% - 1rem);
+    @apply flex-0 flex-1 calc(33.333% - 1rem);
   }
 
   &__image {
-    width: 100%;
-    height: auto;
+    @apply w-full h-auto;
   }
 
   &__description {
-    padding: 1rem;
-    font-family: $font-family-sans-serif;
-    background-color: $uoc-bg;
-    color: $uoc-corporate;
+    @apply p-4 font-sans bg-uocBg text-uocCorporate;
 
     h2 {
-      font-family: $font-family-serif;
-      font-size: $font-size-responsive-medium;
-      margin: 0;
+      @apply font-serif text-xl text-uocCorporate;
 
       @media (min-width: 768px) {
-        font-size: $font-size-large;
+        @apply text-2xl;
       }
     }
 
     p {
-      font-size: $font-size-responsive-small;
-      margin: 0.5rem 0 0;
+      @apply text-lg mt-2;
 
       @media (min-width: 768px) {
-        font-size: $font-size-small;
+        @apply text-base;
+      }
+    }
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  @apply bg-gray-100 border-b border-gray-300 p-2 flex justify-between items-center;
+
+  .navbar-brand {
+    @apply text-xl font-bold text-uocCorporate;
+  }
+
+  .navbar-toggler {
+    @apply text-xl bg-transparent cursor-pointer border-none ml-auto;
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (min-width: 768px) {
+      @apply hidden;
+    }
+  }
+
+  .navbar-collapse {
+    @apply hidden md:flex;
+
+    &.show {
+      @apply block;
+    }
+  }
+
+  .navbar-nav {
+    @apply list-none m-0 p-0 flex flex-col md:flex-row;
+
+    .nav-item {
+      @apply mr-4;
+
+      .nav-link {
+        @apply text-uocCorporate no-underline;
+
+        &.active {
+          @apply font-bold text-uocMasterbrand;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      @apply flex-col;
+
+      .nav-item {
+        @apply my-2;
       }
     }
   }

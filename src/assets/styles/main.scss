@@ -10,6 +10,12 @@
 @import "variables";
 
 /**
+ * Import Tailwind CSS
+ */
+
+@import "tailwind";
+
+/**
  * Import npm dependencies
  * see: https://v2.parceljs.org/features/module-resolution/
  * see commented examples below
@@ -28,4 +34,4 @@
 
 /**
  * Do NOT include anything else in this file!
- */
+*/
