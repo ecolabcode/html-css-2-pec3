@@ -25,6 +25,13 @@
 // @import "@some-company/some-node-module";
 
 /**
+ * Import extracted classes
+ */
+
+@import "components/btn";
+@import "components/card";
+
+/**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
@@ -34,4 +41,4 @@
 
 /**
  * Do NOT include anything else in this file!
-*/
+ */
