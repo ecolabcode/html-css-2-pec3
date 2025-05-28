@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- Tailwind CSS y SCSS -->
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- Tailwind CSS and main styles -->
   <title>UOC Boilerplate</title>
 </head>
-<body class="body">
-
+<body class="bg-uocBg text-uocCorporate font-sans">
 <!-- Navbar -->
 <header>
-  <nav class="navbar">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">UOC</a>
-      <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        ☰
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a class="text-xl font-bold" href="index.html">UOC</a>
+      <button class="lg:hidden text-xl" id="navbar-toggler">
+        <span class="navbar-toggler-icon">&#9776;</span>
       </button>
-      <div class="navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+      <div class="hidden lg:flex lg:items-center lg:justify-between w-full lg:w-auto" id="navbarNav">
+        <ul class="flex flex-col lg:flex-row">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active px-4 py-2" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="participants.html">Participants</a>
+            <a class="nav-link px-4 py-2" href="participants.html">Participants</a>
           </li>
         </ul>
       </div>
@@ -33,29 +31,33 @@
 </header>
 
 <!-- Main Content -->
-<div class="container">
-  <div class="uoc-grid">
-    <include src="./views/grid-item.html"></include> <!-- grid Component -->
-    <picture class="uoc-grid__item uoc-grid__item--image">
-      <source srcset="./assets/images/imagen2.jpeg?as=webp&width=350" type="image/webp" />
-      <img src="./assets/images/imagen2.jpeg?width=350" alt="Another Image" />
+<div class="container mx-auto p-4">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    <picture class="animate__animated animate__fadeIn">
+      <source srcset="./assets/images/imagen1.jpeg?as=webp&width=350" type="image/webp" />
+      <img src="./assets/images/imagen1.jpeg?width=350" alt="Universitat Oberta de Catalunya" class="max-w-full h-auto rounded-lg shadow-md" />
     </picture>
-    <div class="uoc-grid__item uoc-grid__item--text card">
-      <p class="card-text">Another text content for the grid layout.</p> <!-- extracted scss class card- -->
-      <button class="btn mt-4">Learn More</button>
+    <div class="animate__animated animate__bounceIn p-4 bg-white rounded-lg shadow-md">
+      <h1 class="text-responsive-medium font-serif">Hello, UOC!</h1>
+      <p>This is a starter template for the Advanced HTML and CSS Tools courses from the Master's Program in Multimedia Applications and the Master's Program in Web App and Website Development at the Universitat Oberta de Catalunya.</p>
     </div>
-    <picture class="uoc-grid__item uoc-grid__item--image">
-      <source srcset="./assets/images/imagen3.jpeg?as=webp&width=350" type="image/webp" />
-      <img src="./assets/images/imagen3.jpeg?width=350" alt="Third Image" />
+    <picture class="animate__animated animate__fadeIn">
+      <source srcset="./assets/images/imagen2.jpeg?as=webp&width=350" type="image/webp" />
+      <img src="./assets/images/imagen2.jpeg?width=350" alt="Another Image" class="max-w-full h-auto rounded-lg shadow-md" />
     </picture>
-    <div class="uoc-grid__item uoc-grid__item--text card">
-      <p class="card-text">More text content for the grid layout.</p>
-      <button class="btn mt-4">Learn More</button>
+    <div class="p-4 bg-white rounded-lg shadow-md">
+      <p>Another text content for the grid layout.</p>
+    </div>
+    <picture class="animate__animated animate__fadeIn">
+      <source srcset="./assets/images/imagen3.jpeg?as=webp&width=350" type="image/webp" />
+      <img src="./assets/images/imagen3.jpeg?width=350" alt="Third Image" class="max-w-full h-auto rounded-lg shadow-md" />
+    </picture>
+    <div class="p-4 bg-white rounded-lg shadow-md">
+      <p>More text content for the grid layout.</p>
     </div>
   </div>
 </div>
 <include src="./views/footer.html"></include>
-
-<script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+<script type="module" src="./assets/scripts/main.js"></script><!-- Reference to main.js -->
 </body>
 </html>
